@@ -1,0 +1,479 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* css variables */
+:root {
+    --navbar-height: 70px;
+    --primary-color: rgb(184, 115, 5);
+    --accent-color: #e23744;
+    --text-dark: rgb(46, 31, 38);
+    --bg-gradient: linear-gradient(135deg, #fff7ed 0%, #ffe4cc 40%, #ffd6b3 70%, #fce4ec 100%);
+    --card-bg: rgb(209, 219, 227);
+}
+
+/* ========================
+   NAVIGATION BAR
+======================== */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 0 20px;
+}
+
+#logo {
+    margin: 8px 20px 8px 0;
+    flex-shrink: 0;
+}
+
+#logo img {
+    height: 55px;
+    width: auto;
+}
+
+#navbar ul {
+    display: flex;
+    font-family: "Roboto Slab", serif;
+    list-style: none;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+#navbar ul li {
+    font-size: 1.1rem;
+}
+
+#navbar ul li a {
+    color: var(--text-dark);
+    display: block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-weight: 500;
+}
+
+#navbar ul li a:hover {
+    color: white;
+    background-color: var(--accent-color);
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 8px;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========================
+   HOME SECTION
+======================== */
+#home {
+    display: flex;
+    flex-direction: column;
+    min-height: 530px;
+    padding: 60px 200px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    background: url('../bg7.png') no-repeat center center / cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+#home h1 {
+    color: rgb(184, 115, 5);
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0,0,0,0.2);
+}
+
+#home p {
+    color: rgb(70, 50, 30);
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin: 6px 0;
+    text-shadow: 0 1px 3px rgba(255,255,255,0.6);
+}
+
+/* ========================
+   SERVICES SECTION
+======================== */
+#services {
+    padding: 40px 20px;
+    background: var(--bg-gradient);
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 10px 0;
+}
+
+#services .box {
+    border: none;
+    padding: 24px 20px;
+    border-radius: 20px;
+    width: 320px;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 18px rgba(226, 55, 68, 0.1), 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#services .box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(226, 55, 68, 0.18);
+}
+
+#services .box img {
+    display: block;
+    margin: 0 auto 12px auto;
+    height: 130px;
+    width: auto;
+}
+
+#services .box p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ========================
+   CLIENT SECTION
+======================== */
+#client-section {
+    padding: 50px 20px;
+    position: relative;
+    background: linear-gradient(160deg, #fff3e0 0%, #fce4ec 60%, #fff8e1 100%);
+    overflow: hidden;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../bg10.png') no-repeat center center / cover;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+#client-section h1,
+#clients {
+    position: relative;
+    z-index: 1;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.client-item {
+    padding: 20px 28px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.client-item:hover {
+    transform: scale(1.05);
+}
+
+#clients img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+/* ========================
+   CONTACT SECTION
+======================== */
+#contact {
+    position: relative;
+    padding: 60px 20px;
+    background: var(--bg-gradient);
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.25;
+    background: url('../contact.png') no-repeat center center / cover;
+}
+
+.contact-flex {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-box {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 20px;
+    padding: 36px 40px;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+}
+
+#contact form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+#contact label {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 6px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 9px;
+    font-size: 1rem;
+    border: 1.5px solid #ddd;
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    transition: border-color 0.2s ease;
+    outline: none;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: var(--accent-color);
+}
+
+#contact textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    margin: 10px 0 0 0;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c0303d;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+    background: #1a0a0e;
+    color: #ccc;
+    padding: 16px 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+}
+
+/* ========================
+   UTILITY CLASSES
+======================== */
+.h-primary {
+    font-size: 2.6rem;
+    padding: 12px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.18), 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.h-secondary {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    padding: 10px 12px 6px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    padding: 10px 28px;
+    border: 2px solid white;
+    background-color: rgba(226, 55, 68, 0.85);
+    color: white;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 13px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.btn:hover {
+    background-color: rgba(180, 30, 45, 0.95);
+}
+
+.center {
+    text-align: center;
+}
+
+/* ========================
+   RESPONSIVE — TABLET
+======================== */
+@media (max-width: 900px) {
+    #home {
+        padding: 60px 60px;
+    }
+
+    .service-container {
+        flex-wrap: wrap;
+    }
+
+    #services .box {
+        width: 280px;
+    }
+}
+
+/* ========================
+   RESPONSIVE — MOBILE
+======================== */
+@media (max-width: 640px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.97);
+        padding: 10px 0 16px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        z-index: 999;
+    }
+
+    #nav-links.open {
+        display: flex;
+    }
+
+    #nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-links li a {
+        padding: 10px 20px;
+        border-radius: 0;
+        font-size: 1.1rem;
+    }
+
+    #home {
+        padding: 50px 24px;
+        min-height: 420px;
+    }
+
+    .h-primary {
+        font-size: 1.8rem;
+    }
+
+    .h-secondary {
+        font-size: 1.3rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #services .box {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    #clients {
+        gap: 14px;
+    }
+
+    .client-item {
+        padding: 14px 18px;
+    }
+
+    #clients img {
+        height: 70px;
+    }
+
+    .contact-box {
+        padding: 26px 20px;
+    }
+}

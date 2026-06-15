@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="Zomato.png" alt="Zomato Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
+            <li class="iteam"><a href="#">Home</a></li>
+            <li class="iteam"><a href="#">Services</a></li>
+            <li class="iteam"><a href="#">About Us</a></li>
+            <li class="iteam"><a href="#">Contact</a></li>
+            <li class="iteam"><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to Our Food Delivery Service</h1>
+        <p>Hot, fresh, and delicious meals delivered straight to your doorstep — in under 30 minutes.</p>
+        <p>From local favourites to trending cuisines, your cravings are just one click away.</p>
+        <button class="btn">Order Now</button>
+    </section>
+
+    <section id="services">
+        <h1 class="h-primary center">Our Services</h1>
+        <div class="service-container">
+            <div class="box">
+                <img src="img/pizzaa2.png" alt="Food Ordering">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p>
+                    Browse hundreds of restaurants near you and order your favourite meals in just a few taps. 
+                    Fresh ingredients, real flavours, and guaranteed satisfaction — every single time.
+                </p>
+            </div>
+            <div class="box">
+                <img src="img/pizzaa4.png" alt="Meal Planner">
+                <h2 class="h-secondary center">Meal Planner</h2>
+                <p>
+                    Plan your week's meals in advance and never skip a healthy bite. 
+                    Choose from curated diet-friendly menus, set your schedule, and let us handle the rest.
+                </p>
+            </div>
+            <div class="box">
+                <img src="img/new.png" alt="Track Your Order">
+                <h2 class="h-secondary center">Track Your Order</h2>
+                <p>
+                    Real-time order tracking so you always know where your food is. 
+                    From the kitchen to your door, stay updated every step of the delivery journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="logo1.png" alt="Client Logo">
+            </div>
+            <div class="client-item">
+                <img src="logo2.png" alt="Client Logo">
+            </div>
+            <div class="client-item">
+                <img src="log3.png" alt="Client Logo">
+            </div>
+            <div class="client-item">
+                <img src="logo4.png" alt="Client Logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-flex">
+            <h1 class="h-primary center">Contact Us</h1>
+            <div class="contact-box">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone No.:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.foodonline.com &mdash; All rights reserved!
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
