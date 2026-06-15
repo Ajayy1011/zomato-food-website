@@ -111,7 +111,7 @@
 
 #home::before {
     content: "";
-    background: url('../bg7.png') no-repeat center center / cover;
+    background: url('bg7.png') no-repeat center center / cover;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -199,7 +199,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url('../bg10.png') no-repeat center center / cover;
+    background: url('bg10.png') no-repeat center center / cover;
     opacity: 0.08;
     z-index: 0;
 }
@@ -252,7 +252,7 @@
     inset: 0;
     z-index: 0;
     opacity: 0.25;
-    background: url('../contact.png') no-repeat center center / cover;
+    background: url('contact.png') no-repeat center center / cover;
 }
 
 .contact-flex {
